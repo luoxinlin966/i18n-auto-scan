@@ -1,0 +1,67 @@
+{
+  "name": "i18n-auto-react",
+  "version": "0.0.10",
+  "description": "基于百度翻译API服务的自动翻译插件",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./vite": {
+      "types": "./dist/vite-plugin/index.d.ts",
+      "require": "./dist/vite-plugin/index.js"
+    },
+    "./webpack": {
+      "types": "./dist/webpack-loader/index.d.ts",
+      "require": "./dist/webpack-loader/index.js"
+    }
+  },
+  "bin": {
+    "i18n": "./bin/index.js"
+  },
+  "scripts": {
+    "dev": "rollup -c rollup.config.ts --configPlugin typescript -w",
+    "build": "rollup -c rollup.config.ts --configPlugin typescript",
+    "npm:publish": "npm version patch && npm publish --registry https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "i18n",
+    "i18next",
+    "translate",
+    "auto-translate",
+    "react",
+    "翻译",
+    "国际化",
+    "自动翻译"
+  ],
+  "author": "wuguanwen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wuguanwen28/i18n-auto-react.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@babel/generator": "^7.23.6",
+    "@babel/helper-module-imports": "^7.22.15",
+    "@babel/parser": "^7.23.9",
+    "@babel/traverse": "^7.23.9",
+    "@babel/types": "^7.23.9",
+    "axios": "^1.6.7",
+    "chalk": "^4.1.2",
+    "ignore": "^5.3.1",
+    "prettier": "^3.2.5"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/babel__traverse": "^7.20.5",
+    "@types/node": "^20.11.20",
+    "rollup": "^4.12.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  }
+}
