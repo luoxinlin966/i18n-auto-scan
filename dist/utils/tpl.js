@@ -1,6 +1,6 @@
 'use strict';
 
-const configCode = `/** * @type {import('i18n-auto-react').I18nConfigs} */
+const configCode = `/** * @type {import('i18n-auto-scan').I18nConfigs} */
 const config = {
   entry: './src',
   output: {
@@ -15,7 +15,7 @@ const config = {
   languages: ['zh', 'en'],
 
   importInfo: {
-    source: 'i18n-auto-react',
+    source: 'i18n-auto-scan',
     imported: 'i18n',
     local: '_i18n'
   },
@@ -49,7 +49,7 @@ const ERROE_CODE_MAP = {
 };
 const zhExt = /[\u4e00-\u9fa5]+/;
 const defaultTpl = 'export default $data';
-const exportTpl = `import { extendLocale } from 'i18n-auto-react';
+const exportTpl = `import { extendLocale } from 'i18n-auto-scan';
 $import
 
 // 注册语言包数据
